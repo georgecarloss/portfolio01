@@ -4,136 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboards - Caso Easy Loans | Análisis de Datos</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f7f9;
-            color: #333;
-        }
-
-        header {
-            background-color: #007bff;
-            color: white;
-            padding: 20px 40px;
-            margin-bottom: 25px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0 0 5px 0;
-            font-size: 2.5em;
-        }
-
-        .author-info {
-            display: block;
-            margin-top: 10px;
-            font-size: 1em;
-        }
-
-        .author-info a {
-            color: #ffc107;
-            text-decoration: none;
-        }
-
-        .author-info a:hover {
-            text-decoration: underline;
-        }
-        
-        /* Contenedor simple sin marcos, bordes ni sombras */
-        .block-section {
-            background-color: #f4f7f9;
-            padding: 30px 20px 30px 20px; 
-            margin: 0 auto;
-            max-width: 1400px; 
-            display: block;
-        }
-
-        h2 {
-            color: #007bff;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
-            margin-top: 0; 
-            margin-bottom: 20px;
-        }
-
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-            font-size: 1.1em;
-            color: #555;
-        }
-
-        /* Contenedor de los dashboards para centrado y scroll horizontal */
-        .dashboard-wrapper {
-            text-align: center;
-            margin: 30px auto; 
-            min-width: 1200px; 
-            overflow-x: auto; 
-            display: block;
-            width: fit-content; 
-        }
-
-        /* ESTILO CRÍTICO PARA EL IFRAME: FUERZA A TOMAR EL ATRIBUTO HEIGHT DEL HTML */
-        .isolated-iframe {
-            /* Asegura que el iframe tome el valor explícito de su atributo height */
-            height: inherit !important; 
-            max-width: none;
-            border: none;
-            border-radius: 0;
-            /* Se requiere display: block para que width y height funcionen correctamente */
-            display: block; 
-        }
-
-        /* Se mantiene el estilo para Tableau, pero se aplica la nueva clase a los iframes */
-        .tableauPlaceholder {
-            border: none;
-            border-radius: 0;
-        }
-
-        .comment-text strong {
-            color: #007bff;
-        }
-    </style>
 </head>
-<body>
+<body style="font-family: 'Arial', sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f7f9; color: #333;">
 
-    <header>
-        <h1>Análisis de Préstamos: Easy Loans</h1>
-        <span class="author-info">
+    <header style="background-color: #007bff; color: white; padding: 20px 40px; margin-bottom: 25px; text-align: center;">
+        <h1 style="margin: 0 0 5px 0; font-size: 2.5em;">Análisis de Préstamos: Easy Loans</h1>
+        <span class="author-info" style="display: block; margin-top: 10px; font-size: 1em;">
             Autor: <strong>George Carlos</strong> - Analista de Datos
-            | <a href="https://www.linkedin.com/in/george-carlos-analyst/" target="_blank">LinkedIn</a>
+            | <a href="https://www.linkedin.com/in/george-carlos-analyst/" target="_blank" style="color: #ffc107; text-decoration: none;">LinkedIn</a>
         </span>
     </header>
 
-    <span class="block-section">
-        <h2>Introducción al Caso Práctico</h2>
-        <p>
+    <span class="block-section" style="padding: 30px 20px; margin: 0 auto 25px auto; max-width: 1400px; display: block;">
+        <h2 style="color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 10px; margin-top: 0; margin-bottom: 20px;">Introducción al Caso Práctico</h2>
+        <p style="margin-bottom: 15px; text-align: justify; font-size: 1.1em; color: #555;">
             <strong>Easy Loans</strong> es una empresa financiera que concede préstamos para la adquisición de productos en diferentes establecimientos. Este caso práctico se centra en el análisis de las operaciones realizadas durante el <strong>ejercicio 2023</strong> utilizando herramientas de Business Intelligence (BI) para extraer <strong>insights</strong> que apoyen la toma de decisiones estratégicas.
         </p>
-        <p>
+        <p style="margin-bottom: 15px; text-align: justify; font-size: 1.1em; color: #555;">
             A través de este análisis, buscamos identificar patrones de comportamiento, evaluar la calidad de los préstamos y proporcionar recomendaciones para mejorar la eficiencia de las operaciones financieras. Aplicaremos técnicas avanzadas de visualización y análisis para resaltar las áreas de oportunidad en las operaciones de la empresa.
         </p>
-        <p>
+        <p style="margin-bottom: 15px; text-align: justify; font-size: 1.1em; color: #555;">
             El desarrollo consiste en crear un dashboard de 2 hojas o pestañas en <strong>Tableau</strong> utilizando visualizaciones y funcionalidades exclusivas del software. Posteriormente, replicaremos el diseño en <strong>Power BI</strong> y <strong>Google Looker Studio</strong>, herramientas con gran presencia en el sector de análisis de datos, para comparar capacidades.
         </p>
     </span>
 
-    <span class="block-section">
-        <h2>Dashboard en Tableau</h2>
-        <p class="comment-text">
-            Como se comentó líneas arriba, optaremos por utilizar algunas visualizaciones y funcionalidades exclusivas del software <strong>Tableau</strong>. En este caso, resaltamos el completo control de los <strong>filtros</strong>, como usar una barra deslizante en el filtro de fechas en lugar del clásico estilo calendario. También recalcamos el uso de las <strong>gráficas de cuadrados</strong> para representar de manera visual el agrupamiento de las operaciones. Por último, en Tableau se dispone de un control total de todos los filtros a nivel de informe global, permitiendo la óptima sincronización entre hojas de trabajo de manera muy intuitiva.
+    <span class="block-section" style="padding: 30px 20px; margin: 0 auto 25px auto; max-width: 1400px; display: block;">
+        <h2 style="color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 10px; margin-top: 0; margin-bottom: 20px;">Dashboard en Tableau</h2>
+        <p class="comment-text" style="margin-bottom: 15px; text-align: justify; font-size: 1.1em; color: #555;">
+            Como se comentó líneas arriba, optaremos por utilizar algunas visualizaciones y funcionalidades exclusivas del software <strong style="color: #007bff;">Tableau</strong>. En este caso, resaltamos el completo control de los <strong style="color: #007bff;">filtros</strong>, como usar una barra deslizante en el filtro de fechas en lugar del clásico estilo calendario. También recalcamos el uso de las <strong style="color: #007bff;">gráficas de cuadrados</strong> para representar de manera visual el agrupamiento de las operaciones. Por último, en Tableau se dispone de un control total de todos los filtros a nivel de informe global, permitiendo la óptima sincronización entre hojas de trabajo de manera muy intuitiva.
         </p>
-        <div class="dashboard-wrapper">
-            <div class='tableauPlaceholder' id='viz1759175626966' style='position: relative'>
+        <div class="dashboard-wrapper" style="text-align: center; margin: 30px auto; min-width: 1200px; overflow-x: auto; display: block; width: fit-content;">
+            <div class='tableauPlaceholder' id='viz1759175626966' style='position: relative; border: none;'>
                 <noscript><a href='#'><img alt='Dashboard Easy Loans ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ea&#47;EasyLoans_17591756123660&#47;DashboardEasyLoans&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='EasyLoans_17591756123660&#47;DashboardEasyLoans' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ea&#47;EasyLoans_17591756123660&#47;DashboardEasyLoans&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='es-ES' /><param name='filter' value='publish=yes' /></object>
             </div>
             <script type='text/javascript'>
                 var divElement = document.getElementById('viz1759175626966');
                 var vizElement = divElement.getElementsByTagName('object')[0];
-                // El height de Tableau es controlado por el script de Tableau
                 if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1400px';vizElement.style.height='877px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height='877px';} else { vizElement.style.width='100%';vizElement.style.height='1427px';} 
                 var scriptElement = document.createElement('script');
                 scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
@@ -142,23 +48,23 @@
         </div>
     </span>
 
-    <span class="block-section">
-        <h2>Dashboard adaptado en Power BI</h2>
-        <p class="comment-text">
-            Ahora pasaremos a adaptar el dashboard principal en <strong>Power BI</strong>. Recalcamos que, de igual forma, el desarrollo de informes es muy intuitivo. Un punto a destacar es que para esta adaptación el gráfico de áreas apiladas y el <strong>gráfico de cuadrados</strong> en ambas hojas de trabajo fueron desarrolladas mediante <strong>scripts Python</strong>, dado que no se disponen de forma nativa en Power BI. En el caso del gráfico de las áreas apiladas, se desarrolló uno propio debido a que la funcionalidad deseada para replicar el dashboard original no se pudo lograr en la visualización nativa.
+    <span class="block-section" style="padding: 30px 20px; margin: 0 auto 25px auto; max-width: 1400px; display: block;">
+        <h2 style="color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 10px; margin-top: 0; margin-bottom: 20px;">Dashboard adaptado en Power BI</h2>
+        <p class="comment-text" style="margin-bottom: 15px; text-align: justify; font-size: 1.1em; color: #555;">
+            Ahora pasaremos a adaptar el dashboard principal en <strong style="color: #007bff;">Power BI</strong>. Recalcamos que, de igual forma, el desarrollo de informes es muy intuitivo. Un punto a destacar es que para esta adaptación el gráfico de áreas apiladas y el <strong style="color: #007bff;">gráfico de cuadrados</strong> en ambas hojas de trabajo fueron desarrolladas mediante <strong style="color: #007bff;">scripts Python</strong>, dado que no se disponen de forma nativa en Power BI. En el caso del gráfico de las áreas apiladas, se desarrolló uno propio debido a que la funcionalidad deseada para replicar el dashboard original no se pudo lograr en la visualización nativa.
         </p>
-        <div class="dashboard-wrapper">
-            <iframe title="EasyLoans01" class="isolated-iframe" width="1376" height="1200" tabindex="-1" src="https://app.powerbi.com/reportEmbed?reportId=5f3a70db-3548-416e-a4b7-e3a89440df5d&autoAuth=true&ctid=2b079dc7-e2ea-45bc-9182-0fde14b549b1" frameborder="0" allowFullScreen="true"></iframe>
+        <div class="dashboard-wrapper" style="text-align: center; margin: 30px auto; min-width: 1200px; overflow-x: auto; display: block; width: fit-content;">
+            <iframe title="EasyLoans01" width="1376" height="1200" tabindex="-1" src="https://app.powerbi.com/reportEmbed?reportId=5f3a70db-3548-416e-a4b7-e3a89440df5d&autoAuth=true&ctid=2b079dc7-e2ea-45bc-9182-0fde14b549b1" frameborder="0" allowFullScreen="true" style="border: none; max-width: none; display: block;"></iframe>
         </div>
     </span>
 
-    <span class="block-section">
-        <h2>Dashboard adaptado en Google Looker Studio</h2>
-        <p class="comment-text">
-            Para la adaptación en <strong>Google Looker Studio</strong>, después de muchos tests, optamos por reemplazar el gráfico de cuadrados por un <strong>gráfico de barras y su Promedio</strong>. Esto permitió replicar la distinción entre operaciones que están <strong>sobre el promedio</strong> y operaciones que están <strong>por debajo del promedio</strong>, logrando un objetivo similar con las visualizaciones disponibles.
+    <span class="block-section" style="padding: 30px 20px; margin: 0 auto 25px auto; max-width: 1400px; display: block;">
+        <h2 style="color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 10px; margin-top: 0; margin-bottom: 20px;">Dashboard adaptado en Google Looker Studio</h2>
+        <p class="comment-text" style="margin-bottom: 15px; text-align: justify; font-size: 1.1em; color: #555;">
+            Para la adaptación en <strong style="color: #007bff;">Google Looker Studio</strong>, después de muchos tests, optamos por reemplazar el gráfico de cuadrados por un <strong style="color: #007bff;">gráfico de barras y su Promedio</strong>. Esto permitió replicar la distinción entre operaciones que están <strong style="color: #007bff;">sobre el promedio</strong> y operaciones que están <strong style="color: #007bff;">por debajo del promedio</strong>, logrando un objetivo similar con las visualizaciones disponibles.
         </p>
-        <div class="dashboard-wrapper">
-            <iframe class="isolated-iframe" width="1200" height="1000" tabindex="-1" src="https://lookerstudio.google.com/embed/reporting/08eb33de-d983-4ef5-9a7d-114bb7f27b79/page/oHZZF" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+        <div class="dashboard-wrapper" style="text-align: center; margin: 30px auto; min-width: 1200px; overflow-x: auto; display: block; width: fit-content;">
+            <iframe width="1200" height="1000" tabindex="-1" src="https://lookerstudio.google.com/embed/reporting/08eb33de-d983-4ef5-9a7d-114bb7f27b79/page/oHZZF" frameborder="0" style="border:0; max-width: none; display: block;" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
         </div>
     </span>
 
