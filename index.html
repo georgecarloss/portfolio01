@@ -65,14 +65,15 @@
         .dashboard-container {
             text-align: center;
             margin: 30px 0;
-            /* Se añade un ancho mínimo para que no se encoja horizontalmente en caso de ser necesario */
-            min-width: 900px; 
+            /* Se establece un ancho mínimo más alto para el contenedor de los dashboards */
+            min-width: 1200px; 
             overflow-x: auto; /* Permite desplazamiento si el dashboard es muy ancho */
         }
 
         /* Estilo específico para los dashboards */
         .tableauPlaceholder, iframe {
-            max-width: 100%;
+            /* Asegura que no excedan el ancho del contenedor, pero respeta el width definido */
+            max-width: 100%; 
             height: auto;
             border: 1px solid #ddd;
             border-radius: 4px;
@@ -102,7 +103,7 @@
     <div class="content-section intro-text">
         <h2>Introducción al Caso Práctico</h2>
         <p>
-            **Easy Loans** es una empresa financiera que concede préstamos para la adquisición de productos en diferentes establecimientos. Este caso práctico se centra en el análisis de las operaciones realizadas durante el **ejercicio 2023** utilizando herramientas de Business Intelligence (BI) para extraer *insights* que apoyen la toma de decisiones estratégicas.
+            <strong>Easy Loans</strong> es una empresa financiera que concede préstamos para la adquisición de productos en diferentes establecimientos. Este caso práctico se centra en el análisis de las operaciones realizadas durante el **ejercicio 2023** utilizando herramientas de Business Intelligence (BI) para extraer *insights* que apoyen la toma de decisiones estratégicas.
         </p>
         <p>
             A través de este análisis, buscamos identificar patrones de comportamiento, evaluar la calidad de los préstamos y proporcionar recomendaciones para mejorar la eficiencia de las operaciones financieras. Aplicaremos técnicas avanzadas de visualización y análisis para resaltar las áreas de oportunidad de la empresa.
