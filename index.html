@@ -65,14 +65,13 @@
         .dashboard-container {
             text-align: center;
             margin: 30px 0;
-            /* Se establece un ancho mínimo para el contenedor de los dashboards */
+            /* Se establece un ancho mínimo para que los iframes no se vean encogidos */
             min-width: 1200px; 
             overflow-x: auto; /* Permite desplazamiento si el dashboard es muy ancho */
         }
 
         /* Estilo específico para los dashboards */
         .tableauPlaceholder, iframe {
-            /* Asegura que no excedan el ancho del contenedor, pero respeta el width definido */
             max-width: 100%; 
             height: auto;
             border: 1px solid #ddd;
@@ -106,7 +105,7 @@
             <strong>Easy Loans</strong> es una empresa financiera que concede préstamos para la adquisición de productos en diferentes establecimientos. Este caso práctico se centra en el análisis de las operaciones realizadas durante el <strong>ejercicio 2023</strong> utilizando herramientas de Business Intelligence (BI) para extraer <strong>insights</strong> que apoyen la toma de decisiones estratégicas.
         </p>
         <p>
-            A través de este análisis, buscamos identificar patrones de comportamiento, evaluar la calidad de los préstamos y proporcionar recomendaciones para mejorar la eficiencia de las operaciones financieras. Aplicaremos técnicas avanzadas de visualización y análisis para resaltar las áreas de oportunidad de la empresa.
+            A través de este análisis, buscamos identificar patrones de comportamiento, evaluar la calidad de los préstamos y proporcionar recomendaciones para mejorar la eficiencia de las operaciones financieras. Aplicaremos técnicas avanzadas de visualización y análisis para resaltar las áreas de oportunidad en las operaciones de la empresa.
         </p>
         <p>
             El desarrollo consiste en crear un dashboard de 2 hojas o pestañas en <strong>Tableau</strong> utilizando visualizaciones y funcionalidades exclusivas del software. Posteriormente, replicaremos el diseño en <strong>Power BI</strong> y <strong>Google Looker Studio</strong>, herramientas con gran presencia en el sector de análisis de datos, para comparar capacidades.
@@ -116,28 +115,10 @@
     <div class="content-section">
         <h2>Dashboard en Tableau</h2>
         <p class="comment-text">
-            Optamos por utilizar visualizaciones y funcionalidades exclusivas de Tableau. Resaltamos el completo control de los **filtros**, como el uso de una barra deslizante para las fechas en lugar del clásico estilo calendario. También destacamos el uso de las **gráficas de cuadrados** para representar visualmente el agrupamiento de las operaciones. Por último, en Tableau se dispone de un control total de todos los filtros a nivel de informe global, permitiendo una óptima sincronización entre hojas de trabajo de manera muy intuitiva.
+            Como se comentó líneas arriba, optaremos por utilizar algunas visualizaciones y funcionalidades exclusivas del software <strong>Tableau</strong>. En este caso, resaltamos el completo control de los <strong>filtros</strong>, como usar una barra deslizante en el filtro de fechas en lugar del clásico estilo calendario. También recalcamos el uso de las <strong>gráficas de cuadrados</strong> para representar de manera visual el agrupamiento de las operaciones. Por último, en Tableau se dispone de un control total de todos los filtros a nivel de informe global, permitiendo la óptima sincronización entre hojas de trabajo de manera muy intuitiva.
         </p>
         <div class='dashboard-container tableauPlaceholder' id='viz1759175626966' style='position: relative'>
-            <noscript>
-                <a href='#'><img alt='Dashboard Easy Loans ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ea&#47;EasyLoans_17591756123660&#47;DashboardEasyLoans&#47;1_rss.png' style='border: none' /></a>
-            </noscript>
-            <object class='tableauViz'  style='display:none;'>
-                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-                <param name='embed_code_version' value='3' /> 
-                <param name='site_root' value='' />
-                <param name='name' value='EasyLoans_17591756123660&#47;DashboardEasyLoans' />
-                <param name='tabs' value='no' />
-                <param name='toolbar' value='yes' />
-                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ea&#47;EasyLoans_17591756123660&#47;DashboardEasyLoans&#47;1.png' /> 
-                <param name='animate_transition' value='yes' />
-                <param name='display_static_image' value='yes' />
-                <param name='display_spinner' value='yes' />
-                <param name='display_overlay' value='yes' />
-                <param name='display_count' value='yes' />
-                <param name='language' value='es-ES' />
-                <param name='filter' value='publish=yes' />
-            </object>
+            <noscript><a href='#'><img alt='Dashboard Easy Loans ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ea&#47;EasyLoans_17591756123660&#47;DashboardEasyLoans&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='EasyLoans_17591756123660&#47;DashboardEasyLoans' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ea&#47;EasyLoans_17591756123660&#47;DashboardEasyLoans&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='es-ES' /><param name='filter' value='publish=yes' /></object>
         </div>
         <script type='text/javascript'>
             var divElement = document.getElementById('viz1759175626966');
@@ -153,7 +134,7 @@
     <div class="content-section">
         <h2>Dashboard adaptado en Power BI</h2>
         <p class="comment-text">
-            Ahora presentamos la adaptación del dashboard principal en **Power BI**. El desarrollo de informes también resulta muy intuitivo en esta herramienta. Un punto a destacar es que tanto el gráfico de áreas apiladas como el **gráfico de cuadrados** en ambas hojas de trabajo se desarrollaron mediante **scripts Python**, ya que no se disponen de forma nativa en Power BI. En el caso del gráfico de áreas apiladas, se optó por un desarrollo propio porque la funcionalidad deseada para replicar el dashboard original no se pudo lograr con la visualización nativa.
+            Ahora pasaremos a adaptar el dashboard principal en <strong>PowerBI</strong>. Recalcamos que, de igual forma, el desarrollo de informes es muy intuitivo. Un punto a destacar es que para esta adaptación el gráfico de áreas apiladas y el <strong>gráfico de cuadrados</strong> en ambas hojas de trabajo fueron desarrolladas mediante <strong>scripts Python</strong>, dado que no se disponen de forma nativa en Power BI. En el caso del gráfico de las áreas apiladas, se desarrolló uno propio debido a que la funcionalidad deseada para replicar el dashboard original no se pudo lograr en la visualización nativa.
         </p>
         <div class="dashboard-container">
             <iframe title="EasyLoans01" width="1376" height="750" tabindex="-1" src="https://app.powerbi.com/reportEmbed?reportId=5f3a70db-3548-416e-a4b7-e3a89440df5d&autoAuth=true&ctid=2b079dc7-e2ea-45bc-9182-0fde14b549b1" frameborder="0" allowFullScreen="true"></iframe>
@@ -163,7 +144,7 @@
     <div class="content-section">
         <h2>Dashboard adaptado en Google Looker Studio</h2>
         <p class="comment-text">
-            Para la adaptación en **Google Looker Studio**, después de varias pruebas, se optó por reemplazar el gráfico de cuadrados por un **gráfico de barras y su Promedio**. Esto permitió replicar la distinción visual entre operaciones que están **sobre el promedio** y aquellas que están **por debajo del promedio**, logrando un objetivo similar con las visualizaciones disponibles.
+            Para la adaptación en <strong>Google Looker Studio</strong>, después de muchos tests, optamos por reemplazar el gráfico de cuadrados por un <strong>gráfico de barras y su Promedio</strong>. Esto permitió replicar la distinción entre operaciones que están <strong>sobre el promedio</strong> y operaciones que están <strong>por debajo del promedio</strong>, logrando un objetivo similar con las visualizaciones disponibles.
         </p>
         <div class="dashboard-container">
             <iframe width="1200" height="900" tabindex="-1" src="https://lookerstudio.google.com/embed/reporting/08eb33de-d983-4ef5-9a7d-114bb7f27b79/page/oHZZF" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
